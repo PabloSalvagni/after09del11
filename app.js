@@ -1,5 +1,5 @@
 let formulario = document.getElementById('formulario')
-let tabl = document.getElementById('tablaContent')
+let tabla = document.getElementById('tablaContent')
 
 
 const datos = {
@@ -18,4 +18,12 @@ formulario.addEventListener( 'submit' , (e) => {
     datos.id = document.getElementById('identificacion').value;
     console.log(datos);
 
+    tabla.children[0].innerHTML +=(`
+        <tr>
+            <td>${datos.id}</td>
+            <td>${datos.name}</td>
+            <td>${datos.lastname} </td>
+        </tr>   
+    `)
 })
+
